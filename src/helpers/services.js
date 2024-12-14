@@ -8,6 +8,8 @@ export const fetchUserInfo = async (username) => {
         auth: GitHubApiKey
     })
 
+    console.log(GitHubApiKey);
+
     const result = await octokit.request('GET /users/{username}', {
         username,
         headers: {
