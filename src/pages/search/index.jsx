@@ -19,6 +19,7 @@ const GitHubUserSearch = () => {
         saveToHistory(username, userInfo);
         setSearchResult(userInfo);
       } catch (error) {
+        console.log(error);
         saveToHistory(username, null);
         setSearchResult('no result');
       } finally {
